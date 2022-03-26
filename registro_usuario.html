@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Registro de Usuarios</title>
+        <h1>Registro de Usuarios</h1>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="">Iniciar Sesion</a></li>
+                <li><a href="">Olvide mi contrasena</a></li>
+                <li><a href="">Acerca de Nosotros</a></li>
+            </ul>
+        </nav>
+        <section>
+            <img src="/img/usuario.png">
+        </section>
+        <section>
+            <article>
+                <h2>Datos de Inicio de Sesion</h2>
+                <label>E-mail *</label>
+                <input type="email" name="email"><br>
+                <label>Contrasena *</label>
+                <input type="password" name="contrasenia"><br>
+                <label>Repetir Contrasena *</label>
+                <input type="password" name="contrasenia"><br>
+            </article>
+            <article>
+                <h2>Datos Personales</h2>
+                <label>Nombre</label>
+                <input type="text" name="nombre_user"><br>
+                <label>Apellido</label>
+                <input type="text" name="apellido_user"><br>
+                <label>Genero</label>
+                <input type="radio" id="masculino" name="genero_masculino" value="Masculino">
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="femenino" name="genero_femenino" value="Femenino">
+                <label for="femenino">Femenino</label><br>
+                <label>Numero de Telefono</label>
+                <input type="tel" name="num_tel"><br>
+                <label>Fecha de Nacimiento</label>
+                <input type="date" name="fecha_nacimiento"><br>
+                <label>Pagina Web</label>
+                <input type="text" name="pagina_web"><!--Cambiar el tipo del campo de pagina web-->
+            </article>
+        </section>
+        <section>
+            <h2>Datos de Localizacion</h2>
+            <label>Pais</label>
+            <select name="pais">
+                <option value="AR">Argentina</option>
+                <option value="BR">Brasil</option>
+                <option value="PY">Paraguay</option>
+            </select><br>
+            <label>Provincia/Estado</label>
+            <select name="Provincia">
+                <option></option>
+            </select><br>
+            <label>Ciudad</label>
+            <select name="ciudad">
+                <option></option>
+            </select><br>
+            <label>Calle</label>
+            <input name="calle_user"><br>
+            <label>Altura (numero)</label>
+            <input name="altura_calle_user"><br>
+            <label>Coordenadas</label>
+            <input type="number" name="latitud">
+            <label>Lat</label>
+            <input type="number" name="longitud">
+            <label>Long</label><br>
+
+            <button>Crear mi Cuenta</button>
+        </section>
+        <footer>
+            <ul>
+                <li><a href="">YouTube</a></li>
+                <li>-</li>
+                <li><a href="">U.G.D.</a></li>
+                <li>-</li>
+                <li><a href="">Campus Virtual</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

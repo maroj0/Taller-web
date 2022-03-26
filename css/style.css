@@ -1,0 +1,62 @@
+header{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+}
+
+.imagen_header{
+    height: 50px;
+}
+
+#imagen_boton_play{
+    height: 50px;
+}
+
+.titulo{
+    font-size: 1.5em;
+}
+
+#link_titulo{
+    text-decoration: none;
+    box-shadow: none;
+    color: black;
+}
+
+.menu{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    float: left;
+    margin: 1.5em;
+}
+
+.banner{
+    float: left;
+    width: 330px;
+    height: 390px;
+}
+
+#imagen_banner{
+    width: 330px;
+}
+
+.formulario{
+    width: 330px;
+    height: 390px;
+    float: left;
+}
+
+.pie_de_pagina{
+    clear:both;
+    width: 660px;
+    background-color: black;
+}
