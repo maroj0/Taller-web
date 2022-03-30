@@ -8,6 +8,7 @@ header{
 
 .imagen_header{
     height: 50px;
+    margin-right: 5px;
 }
 
 #imagen_boton_play{
@@ -16,6 +17,8 @@ header{
 
 .titulo{
     font-size: 1.5em;
+    margin-right: 30px;
+    margin-bottom: 0px;
 }
 
 #link_titulo{
@@ -28,6 +31,17 @@ header{
     display: flex;
     justify-content:center;
     align-items: center;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.menu_superior{
+    text-decoration: none;
+    box-shadow: none;
+    color:black;
+    margin-right: 3px;
+    margin-left: 3px;
+    font-size: 17px;
 }
 
 ul{
@@ -39,9 +53,17 @@ li{
     margin: 1.5em;
 }
 
+.centro{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 430px;
+}
+
 .banner{
-    float: left;
-    width: 330px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
     height: 390px;
 }
 
@@ -50,13 +72,79 @@ li{
 }
 
 .formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
     width: 330px;
     height: 390px;
-    float: left;
+}
+
+.datos_inicio_sesion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.campo{
+    height: 18px;
+    width: 200px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.descripcion{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+}
+
+#primer_campo{
+    margin-top: 40px;
+}
+
+button{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    color:black;
+    border-style: solid;
+    border-width: 1px;
+    background:white;
+    border-color: grey;
+    width: 215px;
+    height: 45px;
+}
+
+#b_iniciar{
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+#b_crear{
+    margin-top: 30px;
+}
+
+hr{
+    height: 1px;
+    width: 100%;
+    background-color: black;
 }
 
 .pie_de_pagina{
-    clear:both;
-    width: 660px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
     background-color: black;
+    height: 50px;
+}
+
+.link_menu{
+    text-decoration: none;
+    box-shadow: none;
+}
+
+.texto_menu_inferior{
+    color:white;
+    font-size: 27px;
 }

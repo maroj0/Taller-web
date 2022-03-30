@@ -9,7 +9,7 @@
         <link rel="icon" href="favicon.ico">
         <title>Video Trend</title>
     </head>
-    <body >
+    <body>
         <header>
             <div class="imagen_header">
                 <a href="index.html"><img src="/img/boton_play.png" id="imagen_boton_play"></a>
@@ -23,39 +23,42 @@
         </header>
         <nav class="menu">
             <ul>
-                <li class="text_menu_superior"><a href="" >Crear una Cuenta</a></li>
-                <li class="text_menu_superior">|</li>
-                <li class="text_menu_superior"><a href="" >Olvide mi contrasena</a></li>
-                <li class="text_menu_superior">|</li>
-                <li class="text_menu_superior"><a href="">Acerca de Nosotros</a></li>
+                <a href="/registro_usuario.html" class="link_menu"><li class="menu_superior">Crear una Cuenta</li></a>
+                <li class="menu_superior">|</li>
+                <a href="" class="link_menu"><li class="menu_superior">Olvide mi contrasena</li></a>
+                <li class="menu_superior">|</li>
+                <a href="" class="link_menu"><li class="menu_superior">Acerca de Nosotros</li></a>
             </ul>
         </nav>
-        <section class="banner">
-            <img src="/img/lapiz_y_libreta.png" id="imagen_banner">
-        </section>
-        <section class="formulario">
-            <article class="datos_inicio_sesion">
-                <form>
-                    <input type="email" name="email"><br>
-                    <label>E-mail</label><br>
-                    <input type="password" name="contrasenia"><br>
-                    <label>Contrasena</label><br>
-                    <button type="submit">Iniciar Sesion</button>
-                </form>
-            </article>
-            <article class="registro_nuevo_usuario">
-                <form action="/registro_usuario.html">
-                    <button type="submit"> Crear una cuenta </button>
-                </form>
-            </article>
-        </section>
+        <div class="centro">
+            <section class="banner">
+                <img src="/img/banner_sin_dimension.png" id="imagen_banner">
+            </section>
+            <section class="formulario">
+                <article>
+                    <form class="datos_inicio_sesion">
+                        <input type="email" name="email" class="campo" id="primer_campo">
+                        <label class="descripcion">E-mail</label>
+                        <input type="password" name="contrasenia" class="campo">
+                        <label class="descripcion">Contrasena</label>
+                        <button type="submit" id="b_iniciar">Iniciar Sesion</button>
+                    </form>
+                </article>
+                <hr>
+                <article class="registro_nuevo_usuario">
+                    <form action="/registro_usuario.html">
+                        <button type="submit" id="b_crear"> Crear una cuenta </button>
+                    </form>
+                </article>
+            </section>
+        </div>
         <footer class="pie_de_pagina">
             <ul class="menu_inferior">
-                <li><a href=""  class="texto_menu_inferior">YouTube</a></li>
+                <a href="https://www.youtube.com/" class="link_menu"><li class="texto_menu_inferior">YouTube</li></a>
                 <li class="texto_menu_inferior">-</li>
-                <li class="texto_menu_inferior"><a href="">U.G.D.</a></li>
+                <a href="https://www.ugd.edu.ar/" class="link_menu"><li class="texto_menu_inferior">U.G.D.</li></a>
                 <li class="texto_menu_inferior">-</li>
-                <li><a href="" class="texto_menu_inferior">Campus Virtual</a></li>
+                <a href="https://campusvirtual.ugd.edu.ar/" class="link_menu"><li class="texto_menu_inferior">Campus Virtual</li></a>
             </ul>
         </footer>
     </body>
