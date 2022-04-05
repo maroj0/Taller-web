@@ -149,3 +149,57 @@ hr{
     color:white;
     font-size: 27px;
 }
+
+.titulo_registro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    size: 1.5em;
+}
+
+.datos_registro{
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    color: grey;
+    font-size: 18px;
+    font-weight: 90;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.columna{
+    display: flex;
+    flex-direction: column;
+}
+
+.lineas_formulario{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.etiquetas{
+    font-size: 16px;
+}
+
+.campo_registro{
+    height: 21px;
+    width: 280px;
+    border-color: grey;
+    border-width: 1px;
+}
+
+.seccion_datos{
+    margin-right: 20px;
+}
+
+.div_banner{
+    position: sticky;
+    top: 20px;
+}
+

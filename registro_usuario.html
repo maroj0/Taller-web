@@ -2,84 +2,128 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
         <title>Registro de Usuarios</title>
-        <h1>Registro de Usuarios</h1>
     </head>
     <body>
-        <nav>
+        <header class="titulo_registro">
+            <h1>Registro de Usuarios</h1>
+        </header>
+        <nav class="menu">
             <ul>
-                <li><a href="">Iniciar Sesion</a></li>
-                <li><a href="">Olvide mi contrasena</a></li>
-                <li><a href="">Acerca de Nosotros</a></li>
+                <a href="index.html" class="link_menu"><li class="menu_superior">Iniciar Sesion</li></a>
+                <li class="menu_superior">|</li>
+                <a href="" class="link_menu"><li class="menu_superior">Olvide mi contrasena</li></a>
+                <li class="menu_superior">|</li>
+                <a href="" class="link_menu"><li class="menu_superior">Acerca de Nosotros</li></a>
             </ul>
         </nav>
-        <section>
-            <img src="/img/usuario.png">
-        </section>
-        <section>
-            <article>
-                <h2>Datos de Inicio de Sesion</h2>
-                <label>E-mail *</label>
-                <input type="email" name="email"><br>
-                <label>Contrasena *</label>
-                <input type="password" name="contrasenia"><br>
-                <label>Repetir Contrasena *</label>
-                <input type="password" name="contrasenia"><br>
-            </article>
-            <article>
-                <h2>Datos Personales</h2>
-                <label>Nombre</label>
-                <input type="text" name="nombre_user"><br>
-                <label>Apellido</label>
-                <input type="text" name="apellido_user"><br>
-                <label>Genero</label>
-                <input type="radio" id="masculino" name="genero_masculino" value="Masculino">
-                <label for="masculino">Masculino</label>
-                <input type="radio" id="femenino" name="genero_femenino" value="Femenino">
-                <label for="femenino">Femenino</label><br>
-                <label>Numero de Telefono</label>
-                <input type="tel" name="num_tel"><br>
-                <label>Fecha de Nacimiento</label>
-                <input type="date" name="fecha_nacimiento"><br>
-                <label>Pagina Web</label>
-                <input type="text" name="pagina_web"><!--Cambiar el tipo del campo de pagina web-->
-            </article>
-        </section>
-        <section>
-            <h2>Datos de Localizacion</h2>
-            <label>Pais</label>
-            <select name="pais">
-                <option value="AR">Argentina</option>
-                <option value="BR">Brasil</option>
-                <option value="PY">Paraguay</option>
-            </select><br>
-            <label>Provincia/Estado</label>
-            <select name="Provincia">
-                <option></option>
-            </select><br>
-            <label>Ciudad</label>
-            <select name="ciudad">
-                <option></option>
-            </select><br>
-            <label>Calle</label>
-            <input name="calle_user"><br>
-            <label>Altura (numero)</label>
-            <input name="altura_calle_user"><br>
-            <label>Coordenadas</label>
-            <input type="number" name="latitud">
-            <label>Lat</label>
-            <input type="number" name="longitud">
-            <label>Long</label><br>
-
-            <button>Crear mi Cuenta</button>
-        </section>
-        <footer>
-            <ul>
-                <li><a href="">YouTube</a></li>
-                <li>-</li>
-                <li><a href="">U.G.D.</a></li>
-                <li>-</li>
-                <li><a href="">Campus Virtual</a></li>
+        <div class="datos_registro">
+            <section class="seccion_datos">
+                <article class="datos_formulario_registro">
+                    <h2>Datos de Inicio de Sesion</h2>
+                    <div class="lineas_formulario">
+                        <label class="etiquetas">E-mail *</label>
+                        <input type="email" name="email" class="campo_registro">
+                    </div>
+                    <div class="lineas_formulario">
+                        <label class="etiquetas">Contrasena *</label>
+                        <input type="password" name="contrasenia" class="campo_registro">
+                    </div>
+                    <div class="lineas_formulario">
+                        <label class="etiquetas">Repetir Contrasena *</label>
+                        <input type="password" name="contrasenia" class="campo_registro">
+                    </div>
+                </article>
+                <article class="datos_formulario_registro">
+                    <h2>Datos Personales</h2>
+                    <div class="lineas_formulario">
+                        <label class="etiquetas">Nombre</label>
+                        <input type="text" name="nombre_user" class="campo_registro">
+                    </div>
+                    <div class="lineas_formulario">
+                        <label class="etiquetas">Apellido</label>
+                        <input type="text" name="apellido_user" class="campo_registro">
+                    </div>
+                    <div class="lineas_formulario">
+                        <label class="etiquetas">Genero</label>
+                        <div>
+                            <input type="radio" id="masculino" name="genero_masculino" value="Masculino">
+                            <label for="masculino">Masculino</label>
+                            <input type="radio" id="femenino" name="genero_femenino" value="Femenino">
+                            <label for="femenino">Femenino</label>
+                        </div>
+                    </div>
+                    <div class="lineas_formulario">
+                        <label class="etiquetas">Numero de Telefono</label>
+                        <input type="tel" name="num_tel" class="campo_registro">
+                    </div>
+                    <div class="lineas_formulario">
+                        <label class="etiquetas">Fecha de Nacimiento</label>
+                        <input type="date" name="fecha_nacimiento" class="campo_registro">
+                    </div>
+                    <div class="lineas_formulario">
+                        <label class="etiquetas">Pagina Web</label>
+                        <input type="text" name="pagina_web" class="campo_registro"><!--Cambiar el tipo del campo de pagina web-->
+                    </div>
+                </article>
+                <article class="datos_formulario_registro">
+                    <h2>Datos de Localizacion</h2>
+                    <div class="lineas_formulario">
+                    <label class="etiquetas">Pais</label>
+                    <select name="pais" class="campo_registro">
+                        <option value="AR">Argentina</option>
+                        <option value="BR">Brasil</option>
+                        <option value="PY">Paraguay</option>
+                    </select>
+                    </div>
+                    <div class="lineas_formulario">
+                    <label class="etiquetas">Provincia/Estado</label>
+                    <select name="Provincia" class="campo_registro">
+                        <option></option>
+                    </select>
+                    </div>
+                    <div class="lineas_formulario">
+                    <label class="etiquetas">Ciudad</label>
+                    <select name="ciudad" class="campo_registro">
+                        <option></option>
+                    </select>
+                    </div>
+                    <div class="lineas_formulario">
+                    <label class="etiquetas">Calle</label>
+                    <input name="calle_user" class="campo_registro">
+                    </div>
+                    <div class="lineas_formulario">
+                    <label class="etiquetas">Altura (numero)</label>
+                    <input name="altura_calle_user" class="campo_registro">
+                    </div>
+                    <div class="lineas_formulario">
+                    <label class="etiquetas">Coordenadas</label>
+                    <div>
+                        <input type="number" name="latitud">
+                        <label class="etiquetas">Lat</label>
+                        <input type="number" name="longitud">
+                        <label class="etiquetas">Long</label>
+                    </div>
+                    </div>
+    
+                    <button>Crear mi Cuenta</button>
+                </article>
+            </section>
+            <section>
+                <div class="div_banner">
+                    <img src="/img/usuario.png">
+                    <p>Al hacer clic en "Crear mi<br> cuenta", aceptas las Condiciones<br> y confirmas que leiste nuestra<br> Politica de datos, incluido el uso<br> de cookies.</p>
+                </div>
+            </section>
+        </div>
+        <footer class="pie_de_pagina">
+            <ul class="menu_inferior">
+                <a href="https://www.youtube.com/" class="link_menu"><li class="texto_menu_inferior">YouTube</li></a>
+                <li class="texto_menu_inferior">-</li>
+                <a href="https://www.ugd.edu.ar/" class="link_menu"><li class="texto_menu_inferior">U.G.D.</li></a>
+                <li class="texto_menu_inferior">-</li>
+                <a href="https://campusvirtual.ugd.edu.ar/" class="link_menu"><li class="texto_menu_inferior">Campus Virtual</li></a>
             </ul>
         </footer>
     </body>
