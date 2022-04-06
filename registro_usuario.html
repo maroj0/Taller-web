@@ -50,9 +50,9 @@
                             <label class="etiquetas">Genero</label>
                             <div>
                                 <input type="radio" id="masculino" name="genero_masculino" value="Masculino">
-                                <label for="masculino">Masculino</label>
+                                <label for="masculino" style="margin-right: 50px;">Masculino</label>
                                 <input type="radio" id="femenino" name="genero_femenino" value="Femenino">
-                                <label for="femenino">Femenino</label>
+                                <label for="femenino" style="margin-right: 20px;">Femenino</label>
                             </div>
                         </div>
                         <div class="lineas_formulario">
@@ -65,28 +65,49 @@
                         </div>
                         <div class="lineas_formulario">
                             <label class="etiquetas">Pagina Web</label>
-                            <input type="url" name="pagina_web" class="campo_registro"><!--Cambiar el tipo del campo de pagina web-->
+                            <input type="url" name="pagina_web" class="campo_registro">
                         </div>
                     </article>
                     <article class="datos_formulario_registro">
                         <h2>Datos de Localizacion</h2>
                         <div class="lineas_formulario">
                         <label class="etiquetas">Pais</label>
-                        <select name="pais" class="campo_registro">
+                        <select name="pais" class="desplegable">
                             <option value="AR">Argentina</option>
-                            <option value="BR">Brasil</option>
-                            <option value="PY">Paraguay</option>
                         </select>
                         </div>
                         <div class="lineas_formulario">
                         <label class="etiquetas">Provincia/Estado</label>
-                        <select name="Provincia" class="campo_registro">
-                            <option></option>
+                        <select name="Provincia" class="desplegable">
+                            <option value="Buenos Aires">Buenos Aires</option>
+                            <option value="Buenos Aires Capital">Buenos Aires Capital</option>
+                            <option value="Catamarca">Catamarca</option>
+                            <option value="Chaco">Chaco</option>
+                            <option value="Chubut">Chubut</option>
+                            <option value="Cordoba">Cordoba</option>
+                            <option value="Corrientes">Corrientes</option>
+                            <option value="Entre Rios">Entre Rios</option>
+                            <option value="Formosa">Formosa</option>
+                            <option value="Jujuy">Jujuy</option>
+                            <option value="La Pampa">La Pampa</option>
+                            <option value="La Rioja">La Rioja</option>
+                            <option value="Mendoza">Mendoza</option>
+                            <option value="Misiones">Misiones</option>
+                            <option value="Neuquen">Neuquen</option>
+                            <option value="Rio Negro">Rio Negro</option>
+                            <option value="Salta">Salta</option>
+                            <option value="San Juan">San Juan</option>
+                            <option value="San Luis">San Luis</option>
+                            <option value="Santa Cruz">Santa Cruz</option>
+                            <option value="Santa Fe">Santa Fe</option>
+                            <option value="Santiago del Estero">Santiago del Estero</option>
+                            <option value="Tierra del Fuego">Tierra del Fuego</option>
+                            <option value="Tucuman">Tucuman</option>
                         </select>
                         </div>
                         <div class="lineas_formulario">
                         <label class="etiquetas">Ciudad</label>
-                        <select name="ciudad" class="campo_registro">
+                        <select name="ciudad" class="desplegable">
                             <option></option>
                         </select>
                         </div>
@@ -99,17 +120,21 @@
                         <input name="altura_calle_user" class="campo_registro">
                         </div>
                         <div class="lineas_formulario">
-                        <label class="etiquetas">Coordenadas</label>
-                        <div>
-                            <input type="number" name="latitud">
-                            <label class="etiquetas">Lat</label>
-                            <input type="number" name="longitud">
-                            <label class="etiquetas">Long</label>
+                            <div>
+                                <label class="etiquetas">Coordenadas</label>
+                            </div>
+                            <div>
+                                <input type="number" name="latitud" style="width: 80px;">
+                                <label class="etiquetas">Lat</label>
+                                <input type="number" name="longitud" style="width: 80px;">
+                                <label class="etiquetas">Long</label>
+                        
+                            </div>
                         </div>
-                        </div>
-                    
-                        <button type="submit">Crear mi Cuenta</button>
                     </article>
+                    <div class="boton_registrar_cuenta">
+                        <button type="submit">Crear mi Cuenta</button>
+                    </div>
                 </section>
                 <section>
                     <div class="div_banner">
@@ -121,11 +146,11 @@
         </form>
         <footer class="pie_de_pagina">
             <ul class="menu_inferior">
-                <a href="https://www.youtube.com/" class="link_menu"><li class="texto_menu_inferior">YouTube</li></a>
+                <a href="https://www.youtube.com/" class="link_menu" target="_blank"><li class="texto_menu_inferior">YouTube</li></a>
                 <li class="texto_menu_inferior">-</li>
-                <a href="https://www.ugd.edu.ar/" class="link_menu"><li class="texto_menu_inferior">U.G.D.</li></a>
+                <a href="https://www.ugd.edu.ar/" class="link_menu" target="_blank"><li class="texto_menu_inferior">U.G.D.</li></a>
                 <li class="texto_menu_inferior">-</li>
-                <a href="https://campusvirtual.ugd.edu.ar/" class="link_menu"><li class="texto_menu_inferior">Campus Virtual</li></a>
+                <a href="https://campusvirtual.ugd.edu.ar/" class="link_menu" target="_blank"><li class="texto_menu_inferior">Campus Virtual</li></a>
             </ul>
         </footer>
     </body>
