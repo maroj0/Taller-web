@@ -18,105 +18,107 @@
                 <a href="" class="link_menu"><li class="menu_superior">Acerca de Nosotros</li></a>
             </ul>
         </nav>
-        <div class="datos_registro">
-            <section class="seccion_datos">
-                <article class="datos_formulario_registro">
-                    <h2>Datos de Inicio de Sesion</h2>
-                    <div class="lineas_formulario">
-                        <label class="etiquetas">E-mail *</label>
-                        <input type="email" name="email" class="campo_registro">
-                    </div>
-                    <div class="lineas_formulario">
-                        <label class="etiquetas">Contrasena *</label>
-                        <input type="password" name="contrasenia" class="campo_registro">
-                    </div>
-                    <div class="lineas_formulario">
-                        <label class="etiquetas">Repetir Contrasena *</label>
-                        <input type="password" name="contrasenia" class="campo_registro">
-                    </div>
-                </article>
-                <article class="datos_formulario_registro">
-                    <h2>Datos Personales</h2>
-                    <div class="lineas_formulario">
-                        <label class="etiquetas">Nombre</label>
-                        <input type="text" name="nombre_user" class="campo_registro">
-                    </div>
-                    <div class="lineas_formulario">
-                        <label class="etiquetas">Apellido</label>
-                        <input type="text" name="apellido_user" class="campo_registro">
-                    </div>
-                    <div class="lineas_formulario">
-                        <label class="etiquetas">Genero</label>
-                        <div>
-                            <input type="radio" id="masculino" name="genero_masculino" value="Masculino">
-                            <label for="masculino">Masculino</label>
-                            <input type="radio" id="femenino" name="genero_femenino" value="Femenino">
-                            <label for="femenino">Femenino</label>
+        <form action="" method="post">
+            <div class="datos_registro">
+                <section class="seccion_datos">
+                    <article class="datos_formulario_registro">
+                        <h2>Datos de Inicio de Sesion</h2>
+                        <div class="lineas_formulario">
+                            <label class="etiquetas">E-mail *</label>
+                            <input type="email" name="email" class="campo_registro">
                         </div>
+                        <div class="lineas_formulario">
+                            <label class="etiquetas">Contrasena *</label>
+                            <input type="password" name="contrasenia" class="campo_registro">
+                        </div>
+                        <div class="lineas_formulario">
+                            <label class="etiquetas">Repetir Contrasena *</label>
+                            <input type="password" name="contrasenia" class="campo_registro">
+                        </div>
+                    </article>
+                    <article class="datos_formulario_registro">
+                        <h2>Datos Personales</h2>
+                        <div class="lineas_formulario">
+                            <label class="etiquetas">Nombre</label>
+                            <input type="text" name="nombre_user" class="campo_registro">
+                        </div>
+                        <div class="lineas_formulario">
+                            <label class="etiquetas">Apellido</label>
+                            <input type="text" name="apellido_user" class="campo_registro">
+                        </div>
+                        <div class="lineas_formulario">
+                            <label class="etiquetas">Genero</label>
+                            <div>
+                                <input type="radio" id="masculino" name="genero_masculino" value="Masculino">
+                                <label for="masculino">Masculino</label>
+                                <input type="radio" id="femenino" name="genero_femenino" value="Femenino">
+                                <label for="femenino">Femenino</label>
+                            </div>
+                        </div>
+                        <div class="lineas_formulario">
+                            <label class="etiquetas">Numero de Telefono</label>
+                            <input type="tel" name="num_tel" class="campo_registro">
+                        </div>
+                        <div class="lineas_formulario">
+                            <label class="etiquetas">Fecha de Nacimiento</label>
+                            <input type="date" name="fecha_nacimiento" class="campo_registro">
+                        </div>
+                        <div class="lineas_formulario">
+                            <label class="etiquetas">Pagina Web</label>
+                            <input type="text" name="pagina_web" class="campo_registro"><!--Cambiar el tipo del campo de pagina web-->
+                        </div>
+                    </article>
+                    <article class="datos_formulario_registro">
+                        <h2>Datos de Localizacion</h2>
+                        <div class="lineas_formulario">
+                        <label class="etiquetas">Pais</label>
+                        <select name="pais" class="campo_registro">
+                            <option value="AR">Argentina</option>
+                            <option value="BR">Brasil</option>
+                            <option value="PY">Paraguay</option>
+                        </select>
+                        </div>
+                        <div class="lineas_formulario">
+                        <label class="etiquetas">Provincia/Estado</label>
+                        <select name="Provincia" class="campo_registro">
+                            <option></option>
+                        </select>
+                        </div>
+                        <div class="lineas_formulario">
+                        <label class="etiquetas">Ciudad</label>
+                        <select name="ciudad" class="campo_registro">
+                            <option></option>
+                        </select>
+                        </div>
+                        <div class="lineas_formulario">
+                        <label class="etiquetas">Calle</label>
+                        <input name="calle_user" class="campo_registro">
+                        </div>
+                        <div class="lineas_formulario">
+                        <label class="etiquetas">Altura (numero)</label>
+                        <input name="altura_calle_user" class="campo_registro">
+                        </div>
+                        <div class="lineas_formulario">
+                        <label class="etiquetas">Coordenadas</label>
+                        <div>
+                            <input type="number" name="latitud">
+                            <label class="etiquetas">Lat</label>
+                            <input type="number" name="longitud">
+                            <label class="etiquetas">Long</label>
+                        </div>
+                        </div>
+                    
+                        <button type="submit">Crear mi Cuenta</button>
+                    </article>
+                </section>
+                <section>
+                    <div class="div_banner">
+                        <img src="/img/usuario.png">
+                        <p>Al hacer clic en "Crear mi<br> cuenta", aceptas las Condiciones<br> y confirmas que leiste nuestra<br> Politica de datos, incluido el uso<br> de cookies.</p>
                     </div>
-                    <div class="lineas_formulario">
-                        <label class="etiquetas">Numero de Telefono</label>
-                        <input type="tel" name="num_tel" class="campo_registro">
-                    </div>
-                    <div class="lineas_formulario">
-                        <label class="etiquetas">Fecha de Nacimiento</label>
-                        <input type="date" name="fecha_nacimiento" class="campo_registro">
-                    </div>
-                    <div class="lineas_formulario">
-                        <label class="etiquetas">Pagina Web</label>
-                        <input type="text" name="pagina_web" class="campo_registro"><!--Cambiar el tipo del campo de pagina web-->
-                    </div>
-                </article>
-                <article class="datos_formulario_registro">
-                    <h2>Datos de Localizacion</h2>
-                    <div class="lineas_formulario">
-                    <label class="etiquetas">Pais</label>
-                    <select name="pais" class="campo_registro">
-                        <option value="AR">Argentina</option>
-                        <option value="BR">Brasil</option>
-                        <option value="PY">Paraguay</option>
-                    </select>
-                    </div>
-                    <div class="lineas_formulario">
-                    <label class="etiquetas">Provincia/Estado</label>
-                    <select name="Provincia" class="campo_registro">
-                        <option></option>
-                    </select>
-                    </div>
-                    <div class="lineas_formulario">
-                    <label class="etiquetas">Ciudad</label>
-                    <select name="ciudad" class="campo_registro">
-                        <option></option>
-                    </select>
-                    </div>
-                    <div class="lineas_formulario">
-                    <label class="etiquetas">Calle</label>
-                    <input name="calle_user" class="campo_registro">
-                    </div>
-                    <div class="lineas_formulario">
-                    <label class="etiquetas">Altura (numero)</label>
-                    <input name="altura_calle_user" class="campo_registro">
-                    </div>
-                    <div class="lineas_formulario">
-                    <label class="etiquetas">Coordenadas</label>
-                    <div>
-                        <input type="number" name="latitud">
-                        <label class="etiquetas">Lat</label>
-                        <input type="number" name="longitud">
-                        <label class="etiquetas">Long</label>
-                    </div>
-                    </div>
-    
-                    <button>Crear mi Cuenta</button>
-                </article>
-            </section>
-            <section>
-                <div class="div_banner">
-                    <img src="/img/usuario.png">
-                    <p>Al hacer clic en "Crear mi<br> cuenta", aceptas las Condiciones<br> y confirmas que leiste nuestra<br> Politica de datos, incluido el uso<br> de cookies.</p>
-                </div>
-            </section>
-        </div>
+                </section>
+            </div>
+        </form>
         <footer class="pie_de_pagina">
             <ul class="menu_inferior">
                 <a href="https://www.youtube.com/" class="link_menu"><li class="texto_menu_inferior">YouTube</li></a>
