@@ -27,6 +27,10 @@ header{
     color: black;
 }
 
+#link_titulo:hover{
+    color:red;
+}
+
 .menu{
     display: flex;
     justify-content:center;
