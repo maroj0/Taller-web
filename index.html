@@ -6,6 +6,7 @@
         <meta name="keywords" content="HTML, JS, CSS, Guia de Actividades">
         <meta name="author" content="Tomas Cardozo, Martin Ojeda">
         <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <script src="scriptInicioSesion.js"></script>
         <link rel="icon" href="favicon.ico">
         <title>Video Trend</title>
     </head>
@@ -36,12 +37,12 @@
             </section>
             <section class="formulario">
                 <article>
-                    <form class="datos_inicio_sesion" method="post">
+                    <form class="datos_inicio_sesion">
                         <input type="email" name="email" class="campo" id="primer_campo">
                         <label class="descripcion">E-mail</label>
-                        <input type="password" name="contrasenia" class="campo">
+                        <input type="password" name="contrasenia" class="campo" id="contrasenia">
                         <label class="descripcion">Contrasena</label>
-                        <button type="submit" id="b_iniciar">Iniciar Sesion</button>
+                        <button id="b_iniciar" onclick="mostrar_Mensaje(primer_campo,contrasenia)">Iniciar Sesion</button>
                     </form>
                 </article>
                 <hr>
