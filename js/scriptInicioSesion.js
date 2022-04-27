@@ -8,3 +8,4 @@ function mostrar_Mensaje(email, contrasenia){
     let usuario = new Usuario(email,contrasenia);
     usuario.alertaMensaje
 }
+
