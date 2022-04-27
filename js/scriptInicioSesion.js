@@ -9,3 +9,33 @@ function mostrar_Mensaje(email, contrasenia){
     usuario.alertaMensaje
 }
 
+
+function cambiarImagen(){
+    let sourceImagen = $("#imagen_banner").attr("src");
+    console.log(sourceImagen);
+    if($("#imagen_banner").attr("src") == "/img/banner_sin_dimension.png"){
+        $("#imagen_banner").slideToggle( function(){
+            $("#imagen_banner").attr("src","/img/tierra.png").slideToggle();
+            }
+        )
+        
+    }
+
+    if($("#imagen_banner").attr("src") == "/img/tierra.png"){
+        $("#imagen_banner").slideToggle( function(){
+            $("#imagen_banner").attr("src","/img/computadora.png").slideToggle();
+            }
+        )
+        
+    }
+
+    if($("#imagen_banner").attr("src") == "/img/computadora.png"){
+        $("#imagen_banner").slideToggle( function(){
+            $("#imagen_banner").attr("src","/img/banner_sin_dimension.png").slideToggle();
+            }
+        )
+        
+    }
+
+
+}
