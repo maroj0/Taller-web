@@ -105,7 +105,7 @@ li{
 
 }
 
-#primer_campo{
+#email{
     margin-top: 40px;
 }
 
@@ -221,3 +221,9 @@ h2{
     top: 20px;
 }
 
+.datepicker{
+    height: 21px;
+    width: 280px;
+    border-color: grey;
+    border-width: 1px;
+}
