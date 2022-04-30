@@ -84,7 +84,7 @@
                         </div>
                         <div class="lineas_formulario">
                         <label class="etiquetas">Provincia/Estado</label>
-                        <select name="Provincia" id="provincia" class="campo_registro" data-bs-toggle="tooltip" data-bs-placement="top" title="Seleccion su Provincia de residencia">
+                        <select name="Provincia" id="provincia" class="campo_registro" data-bs-toggle="tooltip" data-bs-placement="top" title="Seleccion su Provincia de residencia" onchange="buscarUbicacion()">
                             <option value="Misiones">Misiones</option>
                             <option value="Buenos Aires">Buenos Aires</option>
                             <option value="Buenos Aires Capital">Buenos Aires Capital</option>
@@ -113,7 +113,7 @@
                         </div>
                         <div class="lineas_formulario">
                         <label class="etiquetas">Ciudad</label>
-                        <select name="ciudad" id="ciudad" class="campo_registro" data-bs-toggle="tooltip" data-bs-placement="top" title="Seleccione su Ciudad de residencia">
+                        <select name="ciudad" id="ciudad" class="campo_registro" data-bs-toggle="tooltip" data-bs-placement="top" title="Seleccione su Ciudad de residencia" onchange="buscarUbicacion()">
                             <option value="Posadas">Posadas</option>
                             <option value="Buenos Aires">Buenos Aires</option>
                             <option value="Iguazu">Iguazu</option>
