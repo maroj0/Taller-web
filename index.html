@@ -33,7 +33,8 @@
         </nav>
         <div class="centro">
             <section class="banner">
-                <img src="/img/banner_sin_dimension.png" id="imagen_banner" onclick="cambiarImagen()">
+                <img src="/img/banner_sin_dimension.png" id="imagen_banner" onclick="cambiarImagen()"> 
+                <!--Invocacion a la funcion 'cambiarImagen' en el script 'Actividad2C' al hacer click sobre el banner-->
             </section>
             <section class="formulario">
                 <article>
@@ -43,11 +44,12 @@
                         <input type="password" name="contrasenia" class="campo" id="contrasenia">
                         <label class="descripcion">Contraseña</label>
                         <button id="b_iniciar" onclick="mostrar_Mensaje(email,contrasenia)">Iniciar Sesion</button>
+                        <!--Invocacion a la funcion 'mostrar_Mensaje' en el script 'Actividad1D' al hacer click sobre el banner-->
                     </form>
                 </article>
                 <hr>
                 <article class="registro_nuevo_usuario">
-                    <form action="/registro_usuario.html">
+                    <form action="/registro_usuario.html"> 
                         <button type="submit" id="b_crear"> Crear una cuenta </button>
                     </form>
                 </article>
@@ -62,8 +64,8 @@
                 <a href="https://campusvirtual.ugd.edu.ar/" class="link_menu" target="_blank"><li class="texto_menu_inferior">Campus Virtual</li></a>
             </ul>
         </footer>
-        <script src="js/scriptInicioSesion.js"></script>
-
+        <script src="js/Actividad1D.js"></script>
+        <script src="js/Actividad2C.js"></script>
         </body>
 
 </html>
