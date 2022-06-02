@@ -48,6 +48,15 @@ class User extends BaseController
             $data['error']='Error al crear el usuario';
             return view ('registrar',$data);
         }
+        $model = model(UserModel::class);
+
+        $model->save([
+            'usuario' => 'hotmail.com',
+            'pass'  => '1234',
+            'nombre'  => 'asfasfsf de prueba',
+        ]);
+
+        $id=$model->insertID;
 
         print_r('guardo todo bien id:'.$id);
     }
@@ -78,4 +87,7 @@ class User extends BaseController
 		$data['mensaje'] = 'Email invalido';
 		echo json_encode($data);
     }
+        return view('registro_usuario.php')
+    }
+
 }

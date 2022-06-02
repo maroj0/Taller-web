@@ -8,4 +8,7 @@ class Home extends BaseController
     {
         return view('welcome_message');
     }
+    public function usuarios($name){
+        return "<h1>Hola mundo</h1>" . $name;
+    }
 }
