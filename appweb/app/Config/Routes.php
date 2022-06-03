@@ -32,7 +32,9 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
-$routes->match(['get','post'],'login/verificaremail', 'Users::verificaremail');
+$routes->match(['get','post'],'verificaremail', 'User::verificaremail');
+$routes->match(['get','post'],'insert', 'User::insert');
+$routes->match(['get','post'],'iniciar_sesion', 'User::iniciar_sesion');
 
 /*
  * --------------------------------------------------------------------

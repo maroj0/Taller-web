@@ -7,7 +7,7 @@
         <meta name="author" content="Tomas Cardozo, Martin Ojeda">
         <link rel="stylesheet" type="text/css" href="/css/style.css">
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-        <link rel="icon" href="favicon.ico">
+        <link rel="icon" href="<?php echo base_url('/favicon.ico'); ?>">
         <title>Video Trend</title>
     </head>
     <body>
@@ -38,7 +38,7 @@
             </section>
             <section class="formulario">
                 <article>
-                    <form class="datos_inicio_sesion">
+                    <form action="iniciar_sesion" class="datos_inicio_sesion" method="post">
                         <input type="email" name="email" class="campo" id="email">
                         <label class="descripcion">E-mail</label>
                         <input type="password" name="contrasenia" class="campo" id="contrasenia">

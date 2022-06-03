@@ -8,7 +8,7 @@
         <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
         <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.css"/>
         <script src="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.umd.js"></script>
-        <link rel="icon" href="favicon.ico">
+        <link rel="icon" href="<?php echo base_url('/favicon.ico'); ?>">
         <title>Registro de Usuarios</title>
     </head>
     <body>
@@ -24,15 +24,15 @@
                 <a href="" class="link_menu"><li class="menu_superior">Acerca de Nosotros</li></a>
             </ul>
         </nav>
-        <form action="" method="post">
+        <form action="insert" method="post">
             <div class="datos_registro">
                 <section class="seccion_datos">
                     <article class="datos_formulario_registro">
                         <h2>Datos de Inicio de Sesion</h2>
                         <div class="lineas_formulario">
                             <label class="etiquetas">E-mail *</label>
+                            <div id="imagen_email_valido" style></div>
                             <input type="email" name="email" class="campo_registro"  data-bs-toggle="tooltip" data-bs-placement="top" title="Ingrese el email con el que registrara su cuenta" id="example" onblur="comprobrarEmail()" required>
-                            <!--Se agrega el atributo 'data-bs-toggle="tooltip"' que permitira mostrar un mensaje descriptivo sobre cada input del formulario-->
                         </div>
                         <div class="lineas_formulario">
                             <label class="etiquetas">Contraseña *</label>
@@ -85,7 +85,7 @@
                         </div>
                         <div class="lineas_formulario">
                         <label class="etiquetas">Provincia</label>
-                        <select name="Provincia" id="provincia" class="campo_registro" data-bs-toggle="tooltip" data-bs-placement="top" title="Seleccion su Provincia de residencia" onchange="buscarUbicacion()">
+                        <select name="provincia" id="provincia" class="campo_registro" data-bs-toggle="tooltip" data-bs-placement="top" title="Seleccion su Provincia de residencia" onchange="buscarUbicacion()">
                             <option value="Misiones">Misiones</option>
                             <option value="Buenos Aires">Buenos Aires</option>
                             <option value="Buenos Aires Capital">Buenos Aires Capital</option>
@@ -147,7 +147,7 @@
                         <div id="map"></div><!--Div donde se agregara el mapa-->
                     </article>
                     <div class="boton_registrar_cuenta">
-                        <button type="submit" class="btn btn-primary">Crear mi Cuenta</button> <!--Boton predeterminado de Bootstrap-->
+                        <button type="submit" class="btn btn-primary" id="btn-Crear-Cuenta">Crear mi Cuenta</button> <!--Boton predeterminado de Bootstrap-->
                     </div>
                 </section>
                 <section>
