@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Home Page de la Guia de Actividades 3 de Taller de Aplicaciones Web">
+        <meta name="keywords" content="CodeIgniter, Guia de Actividades">
+        <meta name="author" content="Tomas Cardozo, Martin Ojeda">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        <script src="https://apis.google.com/js/api.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+        <script type="text/javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/css/home_page.css">
+        <link rel="icon" href="favicon.ico">
+        <title>Video Trend - Home Page</title>
+    </head>
+    <body>
+        <header class="barra_superior_home_page">
+            <h1 class="titulo_home_page">VideoTrend</h1>
+            <div class="usuario_home_page">
+                <img src="img/usuario2.png" width="20px" class="imagen_usuario">
+                <h3>Nombre Usuario</h3>
+            </div>
+        </header>
+        <div class="campos_busqueda">
+            <div class="lineas_formulario">
+                <label>Titulo</label>
+                <div>
+                    <input name="titulo_cateogria" id="titulo_categoria">
+                    <button onclick="agregar_categoria()">Agregar</button>
+                </div>
+            </div>
+            <div class="lineas_formulario">
+                <label>Terminos de búsqueda</label>
+                <div>
+                    <input id="query" name="terminos_busqueda">
+                    <button onclick="search()">Buscar</button>
+                </div>
+            </div>
+        </div>
+        <div class="seccion_resultados" id="seccion_resultados">
+            <table id="example" class="display" style="width:100%">
+            </table>
+            <button onclick="search()">Buscar Más</button>
+        </div>
+        <script src="js/home_page_script.js"></script>
+    </body>
+</html>
