@@ -6,10 +6,6 @@ use App\Models\UserModel;
 
 class User extends BaseController
 {
-    public function index()
-    {
-        return view('welcome_message');
-    }
 
     public function list(){
         
