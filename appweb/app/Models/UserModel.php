@@ -23,8 +23,7 @@ class UserModel extends Model{
     }
 
     public function consultarIniciarSesion($email,$contrasena){
-        $x=$this->db->table('usuario');
-        $resultado= $x->where('email',$email)->first();
+        $resultado= $this->where('email',$email)->first();
         if($resultado){
             if($resultado['contrasena']==$contrasena){
                 return True;
@@ -33,5 +32,19 @@ class UserModel extends Model{
             }
         }
     }
-   
+
+    public function buscarId($email){
+        $resultado= $this->where('email',$email)->first();
+        if($resultado){
+            return $resultado['id'];
+        }
+    }
+
+    public function buscarUsuario($email){
+        $resultado= $this->where('email',$email)->first();
+        if($resultado){
+            return $resultado;
+        }
+    }
+
 }

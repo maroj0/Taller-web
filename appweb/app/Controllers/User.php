@@ -84,17 +84,50 @@ class User extends BaseController
         $usuario = new UserModel();
         $email = $this->request->getPost('email');
         $contrasena = $this->request->getPost('contrasenia');
-        $data = $usuario->where('email', $email)->first();
-        if($data){
-            if($data['contrasena']==md5($contrasena)){
-                return view('home_page');
-            }else{
-                echo '<script language="javascript">alert("Correo o Contraseña Invalido");</script>';
-                return view ('iniciar_sesion');
-            }
+        if($usuario->consultarIniciarSesion($email,md5($contrasena))){
+            return view('home_page');
+        }else{
+            echo '<script language="javascript">alert("Correo o Contraseña Invalido");</script>';
+            return view ('iniciar_sesion');
         }
+        
     }
 
-    
+    public function consultar_nombre(){
+        $email = $this->request->getPost('email');
+        $usuario = new UserModel();
+        $data['nombre_usuario'] = $usuario->nombre_usuario($email);
+        echo json_encode($data);
+    }
 
+    public function obtener_datos_usuario(){
+        $email = $this->request->getPost('email');
+        $usuario = new UserModel();
+        $datos_usuario = $usuario->buscarUsuario($email);
+        echo json_encode($datos_usuario);
+    }
+
+    public function mostrar_perfil(){
+        return view('modificar_perfil');
+    }
+
+    public function modificar_datos_usuario(){
+        $id = (int)($this->request->getPost('id'));
+        $modificarUsuario = new UserModel();
+        $datosModificarUsuario = [
+            'email' => $this->request->getPost('email'),
+            'nombre' => $this->request->getPost('nombre'),
+            'apellido' => $this->request->getPost('apellido'),
+            'genero' => $this->request->getPost('genero'),
+            'numtel' => $this->request->getPost('numtel'),
+            'fechanacimiento' => $this->request->getPost('fechanacimiento'),
+            'pagweb' => $this->request->getPost('pagweb'),
+            'pais' => $this->request->getPost('pais'),
+            'provincia' => $this->request->getPost('provincia'),
+            'ciudad' => $this->request->getPost('ciudad'),
+            'calle' => $this->request->getPost('calle'),
+            'altura' => $this->request->getPost('altura')
+        ];
+        $modificarUsuario->update($id,$datosModificarUsuario);
+    }
 }

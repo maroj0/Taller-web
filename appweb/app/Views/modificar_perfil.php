@@ -4,27 +4,14 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="/css/style.css ">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/>
-        <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.css"/>
-        <script src="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.umd.js"></script>
         <link rel="icon" href="<?php echo base_url('/favicon.ico'); ?>">
-        <title>Registro de Usuarios</title>
+        <title>Mi perfil</title>
     </head>
     <body>
         <header class="titulo_registro">
-            <h1>Registro de Usuarios</h1>
+            <h1>Mis datos</h1>
         </header>
-        <nav class="menu">
-            <ul>
-                <a href="http://localhost/appweb/public/User/mostrar_login" class="link_menu"><li class="menu_superior">Iniciar Sesion</li></a>
-                <li class="menu_superior">|</li>
-                <a href="" class="link_menu"><li class="menu_superior">Olvide mi contraseña</li></a>
-                <li class="menu_superior">|</li>
-                <a href="" class="link_menu"><li class="menu_superior">Acerca de Nosotros</li></a>
-            </ul>
-        </nav>
-        <form action="insert" method="post">
+        <form id="formulario_modificacion" action="http://localhost/appweb/public/HomePage/index">
             <div class="datos_registro">
                 <section class="seccion_datos">
                     <article class="datos_formulario_registro">
@@ -32,26 +19,18 @@
                         <div class="lineas_formulario">
                             <label class="etiquetas">E-mail *</label>
                             <div id="imagen_email_valido" style></div>
-                            <input type="email" name="email" class="campo_registro"  data-bs-toggle="tooltip" data-bs-placement="top" title="Ingrese el email con el que registrara su cuenta" id="example" onblur="comprobrarEmail()" required>
-                        </div>
-                        <div class="lineas_formulario">
-                            <label class="etiquetas">Contraseña *</label>
-                            <input type="password" name="contrasenia" class="campo_registro" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingrese la contraseña de su nueva cuenta"required>
-                        </div>
-                        <div class="lineas_formulario">
-                            <label class="etiquetas">Repetir Contraseña *</label>
-                            <input type="password" name="contrasenia" class="campo_registro" data-bs-toggle="tooltip" data-bs-placement="top" title="Repita la contraseña" required>
+                            <input type="email" name="email" class="campo_registro"  data-bs-toggle="tooltip" data-bs-placement="top" title="Ingrese el email con el que registrara su cuenta" id="example" onblur="comprobrarEmailEditar()" required>
                         </div>
                     </article>
                     <article class="datos_formulario_registro">
                         <h2>Datos Personales</h2>
                         <div class="lineas_formulario">
                             <label class="etiquetas">Nombre</label>
-                            <input type="text" name="nombre_user" class="campo_registro" maxlength="60" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingrese su(s) nombre(s)">
+                            <input type="text" id="nombre_user" name="nombre_user" class="campo_registro" maxlength="60" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingrese su(s) nombre(s)">
                         </div>
                         <div class="lineas_formulario">
                             <label class="etiquetas">Apellido</label>
-                            <input type="text" name="apellido_user" class="campo_registro" maxlength="60" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingrese su(s) apellido(s)">
+                            <input type="text" id="apellido_user" name="apellido_user" class="campo_registro" maxlength="60" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingrese su(s) apellido(s)">
                         </div>
                         <div class="lineas_formulario">
                             <label class="etiquetas">Genero</label>
@@ -64,15 +43,15 @@
                         </div>
                         <div class="lineas_formulario">
                             <label class="etiquetas">Numero de Teléfono</label>
-                            <input type="tel" name="num_tel" class="campo_registro" placeholder="(Código de área) Número" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingrese su numero de telefono celular">
+                            <input type="tel" id="num_tel" name="num_tel" class="campo_registro" placeholder="(Código de área) Número" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingrese su numero de telefono celular">
                         </div>
                         <div class="lineas_formulario">
                             <label class="etiquetas">Fecha de Nacimiento</label>
-                            <input type="date" name="fecha_nacimiento" class="datepicker" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingrese la su Fecha de Nacimiento, debe marcarla en el calendario">
+                            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="datepicker" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingrese la su Fecha de Nacimiento, debe marcarla en el calendario">
                         </div>
                         <div class="lineas_formulario">
                             <label class="etiquetas">Página Web</label>
-                            <input type="url" name="pagina_web" class="campo_registro" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingrese su pagina web">
+                            <input type="url" id="pagina_web" name="pagina_web" class="campo_registro" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingrese su pagina web">
                         </div>
                     </article>
                     <article class="datos_formulario_registro">
@@ -122,55 +101,31 @@
                         </div>
                         <div class="lineas_formulario">
                         <label class="etiquetas">Calle</label>
-                        <input name="calle_user" id="calle" class="campo_registro" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingrese la calle de su domicilio" 
-                        onchange="buscarUbicacion()" oninput="this.onchange()">
+                        <input name="calle_user" id="calle" class="campo_registro" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingrese la calle de su domicilio">
                         <!--Cada vez que se produzca un cambio sobre el input de la Calle se llamara a la funcion que permite ubicar dicha direccion en el mapa-->
                         </div>
                         <div class="lineas_formulario">
                         <label class="etiquetas">Altura (numero)</label>
-                        <input name="altura_calle" id="altura" class="campo_registro" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingrese la altura a la que se encuentra su domicilio"
-                        onchange="buscarUbicacion()" oninput="this.onchange()">
+                        <input name="altura_calle" id="altura" class="campo_registro" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingrese la altura a la que se encuentra su domicilio">
                         <!--Cada vez que se produzca un cambio sobre el input de la Altura se llamara a la funcion que permite ubicar dicha direccion en el mapa-->
                         </div>
-                        <div class="lineas_formulario">
-                            <div>
-                                <label class="etiquetas">Coordenadas</label>
-                            </div>
-                            <div>
-                                <input type="number" step="any" id="lat" name="latitud" style="width: 80px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingrese las coordenadas precisas de su Localizacion">
-                                <label class="etiquetas">Lat</label>
-                                <input type="number" step="any" id="long" name="longitud" style="width: 80px;" data-bs-toggle="tooltip" data-bs-placement="top" title="Ingrese las coordenadas precisas de su Localizacion">
-                                <label class="etiquetas">Long</label>
-                        
-                            </div>
-                        </div>
-                        <div id="map"></div><!--Div donde se agregara el mapa-->
                     </article>
                     <div class="boton_registrar_cuenta">
-                        <button type="submit" class="btn btn-primary" id="btn-Crear-Cuenta">Crear mi Cuenta</button> <!--Boton predeterminado de Bootstrap-->
+                        <button type="submit" class="btn btn-primary" id="btn-Crear-Cuenta" >Guardar Cambios</button> <!--Boton predeterminado de Bootstrap-->
                     </div>
                 </section>
                 <section>
                     <div class="div_banner">
                         <img src="/img/usuario.png">
-                        <p>Al hacer clic en "Crear mi<br> cuenta", aceptas las Condiciones<br> y confirmas que leiste nuestra<br> Politica de datos, incluido el uso<br> de cookies.</p>
+                        <p>Al hacer clic en "Guardar cambios",<br> aceptas las Condiciones<br> y confirmas que leiste nuestra<br> Politica de datos, incluido el uso<br> de cookies.</p>
                     </div>
                 </section>
             </div>
         </form>
-        <footer class="pie_de_pagina">
-            <ul class="menu_inferior">
-                <a href="https://www.youtube.com/" class="link_menu" target="_blank"><li class="texto_menu_inferior">YouTube</li></a>
-                <li class="texto_menu_inferior">-</li>
-                <a href="https://www.ugd.edu.ar/" class="link_menu" target="_blank"><li class="texto_menu_inferior">U.G.D.</li></a>
-                <li class="texto_menu_inferior">-</li>
-                <a href="https://campusvirtual.ugd.edu.ar/" class="link_menu" target="_blank"><li class="texto_menu_inferior">Campus Virtual</li></a>
-            </ul>
-        </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <script src="<?php echo base_url('/assets/js/jquery-3.6.0.js'); ?>"></script>
-        <script src="<?php echo base_url('/assets/js/Actividad3B.js'); ?>"></script>     
+        <script src="<?php echo base_url('/assets/js/jquery-3.6.0.js'); ?>"></script> 
         <script src="<?php echo base_url('/assets/js/Actividad3A.js'); ?>"></script>
         <script src="<?php echo base_url('/assets/js/registro.js'); ?>"></script>
+        <script src="<?php echo base_url('/assets/js/modificar_perfil.js'); ?>"></script>
     </body>
 </html>

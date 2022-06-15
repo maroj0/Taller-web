@@ -10,7 +10,6 @@ function comprobrarEmail(){
         url: "verificaremail",
 
         success: function(datos){
-            console.log(datos.bandera)
             if(datos.bandera==1){
                 document.getElementById("imagen_email_valido").innerHTML='<img id="imagen-email-valido"src="http://localhost/appweb/public/assets/img/tickverde.png" height="18"/>'
                 document.getElementById("btn-Crear-Cuenta").style.display = ''
@@ -21,6 +20,7 @@ function comprobrarEmail(){
                 }
                 alert("El email pertenece a un Usuario existente")
             }
+            
         }
     })
 }

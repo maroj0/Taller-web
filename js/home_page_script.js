@@ -1,3 +1,6 @@
+var acc = document.getElementsByClassName("accordion");
+var i;
+
 function start() {
     // Initializes the client with the API key and the Translate API.
     gapi.client.init({
@@ -44,10 +47,27 @@ function search() {
 
 function agregar_categoria(){
   var titulo_categoria = $('#titulo_categoria').val();
+  console.log($('#titulo_categoria').val())
   if(($('#' + titulo_categoria).val())==""){
     alert('La categoria ya existe');
   }else{
-    $('#seccion_resultados').append('<div id=' + titulo_categoria + ' class="categoria" style="width:100%"></div>'); 
+    nueva_categoria = ''
+    nueva_categoria = '<button class="accordion" id="' + titulo_categoria + '-button">' + titulo_categoria + '</button>' + '<div class="panel"><iframe src="https://www.youtube.com//embed/4deUxsQOGps"></iframe></div>'
+    $('#lista_categorias').append(nueva_categoria);
+    acc = document.getElementsByClassName("accordion");
+    acc[acc.length-1].addEventListener("click", function() {
+      /* Toggle between adding and removing the "active" class,
+      to highlight the button that controls the panel */
+      this.classList.toggle("active");
+  
+      /* Toggle between hiding and showing the active panel */
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
   }
 }
 
@@ -55,7 +75,7 @@ function displayResult(item){
     var videoId = item.id.videoId;
     var linkVideo = 'https://www.youtube.com//embed/'+ videoId
     var cuadro_video = ''
-    cuadro_video = cuadro_video + '<div class="cuadro_video">' + '<iframe src="' + linkVideo + '"></iframe>' + '<button id="' + videoId + '">Agregar Video</button></div>'
+    cuadro_video = cuadro_video + '<div class="cuadro_video">' + '<iframe src="' + linkVideo + '"></iframe>' + '<select id="' + videoId + '"><option>Seleccione la categoria</option></select></div>'
     $('#example').append(cuadro_video);
   }
 
@@ -64,8 +84,6 @@ function agregar_video_categoria(idVideo){
   $('#' + $('#titulo_categoria').val()).append('<iframe src="' + linkVideoCategoria + '"></iframe>');
 }
 
-var acc = document.getElementsByClassName("accordion");
-var i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
