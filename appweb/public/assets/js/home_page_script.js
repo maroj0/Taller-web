@@ -30,14 +30,14 @@ function paggination(){
     var requestMore = gapi.client.youtube.search.list({
     q: q,
     part: 'snippet',
-    maxResults: 10,
+    maxResults: 40,
     pageToken: tokenSiguientePagina
     });
   }else{
     var requestMore = gapi.client.youtube.search.list({
       q: q,
       part: 'snippet',
-      maxResults: 10,
+      maxResults: 40,
       pageToken: tokenSiguientePagina,
       order: $('#filtros').val()
       });
@@ -63,13 +63,13 @@ function search() {
     var request = gapi.client.youtube.search.list({
       q: q,
       part: 'snippet',
-      maxResults: 10
+      maxResults: 40
     });
   }else{
     var request = gapi.client.youtube.search.list({
       q: q,
       part: 'snippet',
-      maxResults: 10,
+      maxResults: 40,
       order: $('#filtros').val()
     });
   }
@@ -93,11 +93,22 @@ function agregar_categoria(){
   if(($('#' + titulo_categoria).val())==""){
     alert('La categoria ya existe');
   }else{
-    nueva_categoria = ''
-    nueva_categoria = '<button class="accordion" id="' + titulo_categoria + '-button">' + titulo_categoria + '</button>' + '<div class="panel"></div>'
-    $('#lista_categorias').append(nueva_categoria);
-    acc = document.getElementsByClassName("accordion");
-    acc[acc.length-1].addEventListener("click", function() {
+    $.ajax({
+      // En data puedes utilizar un objeto JSON, un array o un query string
+      data: {'titulo': titulo_categoria,
+      'email': UserEmail
+      },
+      //Cambiar a type: POST si necesario
+      type: "POST",
+      dataType: "json",
+      // URL a la que se enviará la solicitud Ajax
+      url: "http://localhost/appweb/public/HomePage/guardar_categoria",
+      success : function(categoria_nueva){
+        nueva_categoria = ''
+        nueva_categoria = '<button class="accordion" id="' + titulo_categoria + '-button">' + titulo_categoria + '</button>' + '<div class="panel" id="'+ categoria_nueva+'"></div>'
+        $('#lista_categorias').append(nueva_categoria);
+      acc = document.getElementById(titulo_categoria + "-button");
+      acc.addEventListener("click", function() {
       /* Toggle between adding and removing the "active" class,
       to highlight the button that controls the panel */
       this.classList.toggle("active");
@@ -110,17 +121,6 @@ function agregar_categoria(){
         panel.style.display = "block";
       }
     });
-    $.ajax({
-      // En data puedes utilizar un objeto JSON, un array o un query string
-      data: {'titulo': titulo_categoria,
-      'email': UserEmail
-      },
-      //Cambiar a type: POST si necesario
-      type: "POST",
-      dataType: "json",
-      // URL a la que se enviará la solicitud Ajax
-      url: "http://localhost/appweb/public/HomePage/guardar_categoria",
-      success : function(categoria_nueva){
         listaCategoriasUsuario.push('<option value="'+ categoria_nueva +'">' + titulo_categoria + '</option>')
       },
       error : function(xhr){
