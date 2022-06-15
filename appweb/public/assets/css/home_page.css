@@ -28,6 +28,12 @@ body{
     margin-right: 10px;
 }
 
+#link_nombre_usuario{
+    text-decoration: none;
+    box-shadow: none;
+    color: black;
+}
+
 .lineas_formulario{
     display: grid;
     grid-template-columns: 0.5fr 1fr;
@@ -55,6 +61,7 @@ body{
     width: 80%;
     overflow-y: auto;
     border: 2px solid grey;
+    margin-bottom: 20px;
 }
 
 .tabla-videos{
@@ -77,6 +84,10 @@ body{
 input{
     width: 500px;
 
+}
+
+#button_buscar:hover{
+    background-color: red;
 }
 
 .iframe-button {
@@ -107,7 +118,7 @@ input{
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
   .active, .accordion:hover {
-    background-color: #ccc;
+    background-color: rgb(173, 18, 18);
   }
   
   /* Style the accordion panel. Note: hidden by default */

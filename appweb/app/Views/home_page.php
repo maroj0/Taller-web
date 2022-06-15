@@ -30,7 +30,7 @@
                 <label style="text-align: left;">Terminos de búsqueda</label>
                 <div>
                     <input id="query" name="terminos_busqueda">
-                    <button onclick="search()">Buscar</button>
+                    <button onclick="search()" id="button_buscar">Buscar</button>
                 </div>
             </div>
             <div class="lineas_formulario">

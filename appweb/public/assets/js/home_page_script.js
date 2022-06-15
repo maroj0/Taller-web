@@ -182,7 +182,7 @@ function mostrar_categorias(){
 }
 
 function mostrar_nombre_usuario(){
-  $('#seccion_cabecera_usuario').append('<h2><a href="http://localhost/appweb/public/User/mostrar_perfil">'+UserEmail+'</h2>')
+  $('#seccion_cabecera_usuario').append('<h2><a id="link_nombre_usuario" href="http://localhost/appweb/public/User/mostrar_perfil">'+UserEmail+'</h2>')
 }
 
 function displayResult(item){
